@@ -71,7 +71,8 @@ def get_data():
 
 def main():
 	""" Driver to build battles detail html page """
-	webpage.htmlTop()
+	stylesheets = "<link rel='stylesheet' href=''>"
+	webpage.htmlTop(stylesheets)
 	get_data()
 	webpage.htmlBottom()
 

@@ -50,12 +50,13 @@ def get_data():
 	connection.close()
 
 def main():
+	stylesheets = "<link rel='stylesheet' href=''>"
+	webpage.htmlTop(stylesheets)
 	get_data()
+	webpage.htmlBottom()
 
 if __name__=="__main__":
 	try:
-		webpage.htmlTop()
 		main()
-		webpage.htmlBottom()
 	except:
 		cgi.print_exception()

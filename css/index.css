@@ -1,0 +1,16 @@
+body { background-color: lightblue; }
+
+h2, h4 { text-align:center; }
+
+table, tr, td{ 	border: solid;
+			   	border-collapse: collapse;
+				margin:auto; }
+
+td { text-align:center; }
+
+#table { width:100%;
+		 background-color:black; }
+
+#menu { background-color:white; }
+
+ 

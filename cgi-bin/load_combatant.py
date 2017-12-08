@@ -31,7 +31,8 @@ def get_data():
 	print("<a href='/index.html'>HOME</a>")
 
 def main():
-	webpage.htmlTop()
+	stylesheets = "<link rel='stylesheet' href=''>"
+	webpage.htmlTop(stylesheets)
 	get_data()
 	webpage.htmlBottom()
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-def htmlTop(cssstyle=" "):
+def htmlTop(cssstyle):
 	print("Content-type: text/html\n\n",
 				"<!doctype html>",
 			 	"<html>"

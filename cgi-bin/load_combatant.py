@@ -20,13 +20,15 @@ def get_data():
 	connection.close()
 
 	#This needs to take the data form the data base and output it with HTML.
-	print("<form action='/cgi-bin/select_combatant.py'>")
+	
+	print("<table><form action='/cgi-bin/select_combatant.py'>")
 	print("<p>Select a combatant to view more details</p>\n<div>")
 	for item in names:
 		print("<input type='radio' id='combatant" + str(item[0]) +"' checked ")
 		print("name='name' value='"+ str(item[0]) + "'>")
 		print("<label for='combatant"+ str(item[0]) + "'>", item[1],"</label><br/>")
-	print("</div><div><input type='submit'><input type='reset'></div></form>")
+	print("</div><div><input type='submit'><input type='reset'></div></form></table>")
+	print("<a href='/index.html'>HOME</a>")
 
 def main():
 	webpage.htmlTop()

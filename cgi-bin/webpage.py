@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
 
-def htmlTop():
+def htmlTop(cssstyle=" "):
 	print("Content-type: text/html\n\n",
 				"<!doctype html>",
 			 	"<html>"
-			 	"<head>",
-					"\t<meta charset='UTF-8' />",
+			 	"<head>")
+	print("{}".format(cssstyle))
+	print("\t<meta charset='UTF-8' />",
 					"\t<title>TITLE PAGE</title>",
 				"</head>",
-				"<body>", sep="\n")
+				"<body>")
+	
 
 def htmlBottom():
 	print("</body>",
 			 "</html>", sep='\n')
 
-
+if __name__=="__main__":
+	htmlTop()
+	htmlBottom()

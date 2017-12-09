@@ -29,7 +29,7 @@ def get_data():
 
         sql = ("SELECT c.Name, s.Name, s.Type, s.base_atk, s.base_dfn,"
                "s.base_hp FROM combatant AS c, species AS s "
-               "WHERE c.id = s.id AND c.Name = %s;")
+               "WHERE c.species_id = s.id AND c.Name = %s;")
 
         cursor.execute(sql, (name, ))
         data = [row for row in cursor.fetchall()]

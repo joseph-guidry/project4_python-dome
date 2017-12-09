@@ -25,6 +25,7 @@ def get_data():
     cursor = connection.cursor()
     try:
         cursor.execute(sql, (name, species_id, ))
+
         connection.commit()
         print("<h3>Combatant Inserted</h3>")
         print("<a href='/combatants/combatants_list.html'>BACK</a>")

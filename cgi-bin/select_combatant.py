@@ -22,15 +22,16 @@ def get_data():
 		cursor.execute(sql,(cid,))
 
 		names = [(row[0], row[1]) for row in cursor.fetchall()]
-		print(names[0][1])
+		#print(names[0][1])
 		name = names[0][1]
-	
 
-		sql = ("SELECT c.Name, s.Name, s.Type, s.base_atk, s.base_dfn, s.base_hp \
-				FROM combatant AS c, species AS s WHERE c.id = s.id AND c.Name ='"+ name + "';" )
-		cursor.execute(sql)	
+		sql = ("SELECT c.Name, s.Name, s.Type, s.base_atk, s.base_dfn,"
+				"s.base_hp FROM combatant AS c, species AS s "
+				"WHERE c.id = s.id AND c.Name = %s;" )
+		# print(sql)
+		cursor.execute(sql, (name, ))	
 		data = [row for row in cursor.fetchall()]
-		#print("<p>", data, "</p>")
+		
 		print("<table>")
 		print("<tr><th>Combatant Name</th>")
 		print("<th>Species</th><th>Species Type</th><th>Base Attack</th>")

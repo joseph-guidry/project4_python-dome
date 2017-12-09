@@ -6,9 +6,9 @@ import getpass
 import webpage
 
 def get_data():
-	""" Build the battle details html page """
+	""" Determines the input data. Returns HTML for battle details """
+	
 	fields = cgi.FieldStorage()
-
 	cid = fields.getvalue("name", "")
 	input_data = cid.split(",")
 	winner_id = input_data[0]
@@ -23,7 +23,6 @@ def get_data():
 	cursor = connection.cursor()
 	try:
 		cursor.execute(sql1,(input_data[0],))
-
 		winner_name = [row[1] for row in cursor.fetchall()]
 
 		print("<h1>WINNER: ", winner_name[0], "</h1>")
@@ -45,9 +44,9 @@ def get_data():
 		cursor.close()
 		connection.close()
 
-
-		print("<div><a href='/index.html'>HOME</a>")
-		print("<a href='/battle/battle_list.html'>BACK</a></div>")
+		print("<a href='/battle/battle_list.html'>BACK</a>")
+		print("<a href='/index.html'>HOME</a>")
+		
 
 	except IndexError:
 		print("<p>ERROR</p><br/>")

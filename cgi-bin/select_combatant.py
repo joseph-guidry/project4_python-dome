@@ -6,7 +6,7 @@ import getpass
 import webpage
 
 def get_data():
-
+	""" Determines the input data. Returns HTML for combatant details """
 	default = ""
 	fields = cgi.FieldStorage()
 	cid = fields.getvalue("name", default)

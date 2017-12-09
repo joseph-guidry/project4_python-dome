@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Create webpage for selected combatant
+Create web page for selected combatant
 """
 
 import cgi
@@ -56,7 +56,7 @@ def get_data():
 
 
 def main():
-    """ Driver for this dyamic webpage """
+    """ Driver for this dynamic webpage """
     stylesheets = ("<link rel='stylesheet' "
                    "type='text/css' href='/css/tablestyle.css'>")
     webpage.htmlTop(stylesheets)

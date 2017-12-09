@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Creates a webpage of details about a battle
+Creates a web page of details about a battle
 """
 
 import cgi

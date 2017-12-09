@@ -8,12 +8,38 @@
 	<title>Combatants Main Page</title>
 </head>
 <body>
-<h2>The combatants page</h2>
-
+<h2>Combatants Page</h2>
 <form action="/cgi-bin/load_combatant.py">
 	<input type='submit' value="Load Combatants">
 </form>
 <br/>
-<a href="/index.html">Home</a><br/>
+<br/>
+<h2>Insert New Combatant</h2>
+<table>
+<form action="/cgi-bin/add_combatant.py">
+	<tr><td><label ><b>Combatant Name <b></label></td>
+	<td><input name='name' type='text'></td></tr><br/>
+	<tr><td><label><b>Species<b></label></td>
+	<td><select name='species_id'>
+		<option value='1'>Human</option>
+		<option value='2'>Zombie</option>
+		<option value='3'>Mutant</option>
+		<option value='4'>Ooze</option>
+		<option value='5'>Robot</option>
+		<option value='6'>Wendigo</option>
+		<option value='7'>Xorn</option>
+		<option value='8'>Monnkey</option>
+		<option value='9'>Sentient Offal</option>
+		<option value='10'>Imaginary Dragon</option>
+		<option value='11'>Toxic Revenger</option>
+		<option value='12'>Land Mine</option>
+		<option value='13'>Ghost</option>
+		<option value='14'>Large Rock</option>
+	</select></td></tr>
+
+	<tr><td><input type="submit" value="Insert"></td></tr>
+</table>
+<br/>
+<a href="/index.html">HOME</a><br/>
 </body>
 </html>

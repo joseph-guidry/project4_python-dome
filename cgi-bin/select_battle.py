@@ -28,7 +28,7 @@ def get_data():
 
 		print("<h1>WINNER: ", winner_name[0], "</h1>")
 		print("<table>")
-		print("<tr><th><h3>Battle Details</h3></th></tr>")
+		print("<tr><h3>Battle Details</h3></tr>")
 
 		sql2 = ("SELECT * FROM c3 WHERE winner_id=%s AND finish=%s;")
 		cursor.execute(sql2, ( winner_id, date,) )
@@ -45,10 +45,9 @@ def get_data():
 		cursor.close()
 		connection.close()
 
-		print("</p>")
 
-		print("<a href='/index.html'>HOME</a>")
-		print("<a href='/battle/battle_list.html'>BACK</a>")
+		print("<div><a href='/index.html'>HOME</a>")
+		print("<a href='/battle/battle_list.html'>BACK</a></div>")
 
 	except IndexError:
 		print("<p>ERROR</p><br/>")

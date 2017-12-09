@@ -31,10 +31,12 @@ def get_data():
               "'>", item[1],"</label><br/>")
 	print("</div><div><input type='submit'>",
 		  "<input type='reset'></div></form></table>")
-	print("<a href='/index.html'>HOME</a>")
+	print("<a href='/index.html'>HOME</a><br/>")
+	print("<a href='/combatants/combatants_list.html'>BACK to Combatants</a>")
+	print("<a href='/cgi-bin/get_rankings.py'>BACK to Rankings</a>")
 
 def main():
-	stylesheets = "<link rel='stylesheet' href=''>"
+	stylesheets = "<link rel='stylesheet' href='/css/tablestyle.css'>"
 	webpage.htmlTop(stylesheets)
 	get_data()
 	webpage.htmlBottom()

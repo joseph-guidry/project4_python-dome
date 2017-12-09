@@ -24,12 +24,12 @@ def get_data():
 	cursor.close()
 	connection.close()
 	
-	print("<table border=1><tr>RANKINGS</tr>"
+	print("<table><tr><h2>RANKINGS</h2></tr>"
 		  "<tr><form action='/cgi-bin/select_combatant.py'>")
-	
+	print("<tr><td style='text-align:center;'><b>Combatant</b></td><td>Wins</td></tr>")
 	for item in data:
 		print("<tr><td><input type='radio' id='combatant" + str(item[0]) +"'")
-		print("name='name' value='"+ str(item[0]) + "'>")
+		print("name='name' value='"+ str(item[0]) + "' checked>")
 		print("<label for='combatant"+ str(item[0]) + 
               "'>", item[1],"</label></td>")
 		print("<td>", item[2], "</td></tr>")
@@ -43,7 +43,7 @@ def get_data():
 
 def main():
 	""" Driver for this webpage """
-	stylesheets = ""
+	stylesheets = "<link rel='stylesheet' href='/css/tablestyle.css'"
 	webpage.htmlTop(stylesheets)
 	get_data()
 	webpage.htmlBottom()

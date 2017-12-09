@@ -1,1 +1,11 @@
-form { border:1px solid black: }
+body { background-color: lightblue; }
+
+h2, h4 { text-align:left; }
+
+table, tr, td{ 	border: solid;
+			   	border-collapse: collapse;
+				margin:left; }
+
+div { margin:auto; }
+
+td { text-align:left; }

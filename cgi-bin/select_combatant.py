@@ -32,16 +32,20 @@ def get_data():
 		cursor.execute(sql, (name, ))	
 		data = [row for row in cursor.fetchall()]
 		
-		print("<table>")
-		print("<tr><th>Combatant Name</th>")
-		print("<th>Species</th><th>Species Type</th><th>Base Attack</th>")
-		print("<th>Base Defense</th><th>Base Health Points</th></tr><tr>")
+		print("<h2>Combatant Details</h2>")
+	
+		print("<div><table><tr><td>Combatant Name</td>")
+		print("<td>Species</td><td>Species Type</td><td>Base Attack</td>")
+		print("<td>Base Defense</td><td>Base Health Points</td></tr><tr>")
 		#print(data)
 		for item in data[0]:
 			print("<td align='right'>",item,"</td>")
-		print("</tr></table>")
-		print("<a href='/combatants/combatants_list.html'>BACK</a>")
+		print("</tr><tr>")
+		print("</tr></table></div><br/><div>")
+		print("<a href='/combatants/combatants_list.html'>BACK to Combatants</a><br/>")
+		print("<a href='/cgi-bin/get_rankings.py'>BACK to Rankings</a><br/>")
 		print("<a href='/index.html'>HOME</a>")
+		
 	
 	except IndexError:
 		print("<p>ERROR</p><br/>")
@@ -51,7 +55,7 @@ def get_data():
 	connection.close()
 
 def main():
-	stylesheets = "<link rel='stylesheet' href=''>"
+	stylesheets = ("<link rel='stylesheet' type='text/css' href='/css/tablestyle.css'>")
 	webpage.htmlTop(stylesheets)
 	get_data()
 	webpage.htmlBottom()

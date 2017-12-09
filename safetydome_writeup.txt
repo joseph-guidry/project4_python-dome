@@ -1,13 +1,20 @@
-Name:
-Date:
-Current Module:
-Project Name:
+Name:   Joseph Guidry
+Date:   12-09-2017
+Current Module: SQL with Python
+Project Name: Safety Dome
 
 Project Goals:
 	<A two to three sentence description of the project and its intent>
+    This project incorporates a few concepts discussed over the last two weeks, SQL command, HTML, Python Back-End scripts for
+    dynamic web pages, and Cascading Style Sheets(CSS), and some JavaScript (JS). The project attempts to use all of them together.
+    Requirements demanded the use of combining SQL commands with HTML and Python scripts. The outcome resulted in displaying 
+    the database information as a web page.
 
 Considerations:
 	<A bulleted list of considerations and conditions which affected the design of your project>
+    - Python syntax for SQL commands
+    - Transferring data between SQL to Python out to HTML.
+    - Troubleshooting broken code can be difficult to locate.
 
 Initial Design:
 	<A paragraph or more that adequately describes your program's structure and layout discussing the various modules (.c and corresponding .h files) that you implemented>
@@ -18,21 +25,35 @@ Initial Design:
 		|
 		|------/Combatant
 		|			|---combatant_list.html	  
-		|			|---combatant_details.html
+		|			
 		|
 		|------/Battles
 		|			|---battles_list.html
-		|			|---battles_details.html
+		|			
 		|
 		|------/cgi-bin
-					|---???
+					|-- add_combatant.py   - allows user to insert new combatant into database.
+					|-- get_rankings.py    - return a list of combatants ordered by the number of wins.
+					|-- load_battles.py    - return a list of battles from the database with access to its details.
+					|-- select_battles.py  - return the details of a selected battle.
+					|-- load_combatants.py - return a list of combatants from the database with access to its details.
+					|-- select_combatants.py - return the details of a selected combatant.
+					|-- webpage.py         - output the skeleton HTML code required for each page.
+		
+        - Other files: There are pictures files used on the home page (sourced from the Internet), and CSS files for attempts at
+          using it on the remaining pages. No working JavaScript was submitted with this project.
 
-		Once estabished 
 Data Flow:
 	<A paragraph or longer describing the data flow of the program in a sequential manner.  Include a diagram when necessary.>
+    The program flows depending in the links that are clicked on. The combatants link will take the user to access, or insert new,
+    combatant details. The same structure is used for the battle web pages. The rankings page generates the list of combatants
+    and wins associated with them, from here the user can request access to further details. Users can return to the home page
+    from any page. 
 
 Communication Protocol:
 	<Discuss any custom communication protocol you have used including the various request and responses that may be sent and received.>
+    No custom protocol was used. The use of a MySQL connection allowed Python access to database commands and query results. This 
+    helped in generating dynamic web pages in HTML used by the web browser.
 
 Potential Pitfalls:
 	<Discuss any potential issues that you might run into while creating the project>
@@ -43,12 +64,19 @@ Potential Pitfalls:
 Test Plan:
 	User Test:
  		<Describe the steps taken for each user test.>
+        - Test plans are done for every page attempted to be on the site.
 	Test Cases:
 		<A brief overview of the test cases that you implemented.>
+        The tests were to ensure proper output and look for HTML, with verified data from the database.
+        Each webpage is dynamic and would render a different output.
+        Inspecting the HTML source code in the browser helped with ensuring proper output.
 
 Conclusion:
 	<A review of the project, what worked, what didn’t and how to improve upon your project in the future.>
-
+    This project pushed the boundaries of what is possible in Python and incorporated additional skills that could be helpful
+    on future projects. The materials in the course were stretched thin over a minimum amount of experience, and didn't prevent
+    myself from attempt even some of the flourishes. This project was enjoyable in the fact that there was no single answer for 
+    how the project is to be presented. 
 
 
 
